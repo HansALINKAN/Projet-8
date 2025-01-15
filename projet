@@ -24,7 +24,7 @@ void EnregistrerVol()
         gets(buffer);
 
 
-        FILE *fichier = fopen("InformationsVol.txt", "w");
+        FILE *fichier = fopen("InformationsVol.txt", "a");
         if (fichier == NULL)
             {
             perror("Erreur d'ouverture du fichier");
@@ -206,9 +206,7 @@ int main()
         printf("2. Reserver un siege\n");
         printf("3. Annuler un siege\n");
         printf("4. Afficher les vols\n");
-        printf("5. Sauvegarder les donnees\n");
-        printf("6. Charger les donnees\n");
-        printf("7. Quitter\n");
+        printf("5. Quitter\n");
         printf("Votre choix : ");
         scanf("%d", &choix);
 
@@ -223,19 +221,12 @@ int main()
                 AnnulerVol();
                 break;
             case 4:
-
+                AfficherVol(); 
                 break;
             case 5:
-
+                printf("Au revoir !\n");
             break;
 
-            case 6:
-                AfficherVol(); 
-
-                break;
-            case 7:
-                printf("Au revoir !\n");
-                break;
             default:
                 printf("Choix invalide.\n");
         }
