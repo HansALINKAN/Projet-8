@@ -230,7 +230,7 @@ int main()
             default:
                 printf("Choix invalide.\n");
         }
-    } while (choix != 7);
+    } while (choix != 5);
 
  return 0 ;
 }
